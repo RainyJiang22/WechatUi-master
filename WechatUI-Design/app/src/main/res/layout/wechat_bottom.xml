@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    >
+
+    <!--底部导航-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="#ffffff"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+
+        <!--微信页面-->
+            <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onTabClicked"
+            android:padding="3dp">
+
+            <LinearLayout
+                android:id="@+id/id_tab_weixin"
+                android:layout_width="60dp"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <ImageButton
+                    android:id="@+id/ib_weixin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="#ffffff"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/weixin_pressed"/>
+                <TextView
+                    android:id="@+id/tv_weixin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ib_weixin"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="3dp"
+                    android:text="微信"
+                    android:textColor="#9A9A9A"
+                    android:textSize="12sp"/>
+            </LinearLayout>>
+        </RelativeLayout>
+
+
+        <!--通讯录-->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onTabClicked"
+            android:padding="3dp">
+            <LinearLayout
+                android:id="@+id/id_tab_contactlist"
+                android:layout_width="60dp"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <ImageButton
+                    android:id="@+id/ib_contactlist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="#ffffff"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/contact_list_normal"/>
+                <TextView
+                    android:id="@+id/tv_contactlist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ib_contactlist"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="3dp"
+                    android:text="通讯录"
+                    android:textColor="#9A9A9A"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <!--发现-->
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onTabClicked"
+            android:padding="3dp">
+
+            <LinearLayout
+                android:id="@+id/id_tab_friends"
+                android:layout_width="60dp"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <ImageButton
+                    android:id="@+id/ib_findfriends"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="#ffffff"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/find_normal"/>
+                <TextView
+                    android:id="@+id/tv_findfriends"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ib_findfriends"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="3dp"
+                    android:text="发现"
+                    android:textColor="#9A9A9A"
+                    android:textSize="12sp"/>
+
+                <!--<TextView-->
+                    <!--android:id="@+id/unread_find_number"-->
+                    <!--android:layout_width="10dp"-->
+                    <!--android:layout_height="10dp"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:visibility="visible"-->
+                    <!--android:background="@drawable/aii"-->
+                    <!--android:textSize="12sp"/>-->
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <!--我的页面-->
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onTabClicked"
+            android:padding="3dp">
+
+            <LinearLayout
+                android:id="@+id/id_tab_profile"
+                android:layout_width="60dp"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <ImageButton
+                    android:id="@+id/ib_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="#ffffff"
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/profile_normal"/>
+                <TextView
+                    android:id="@+id/tv_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ib_profile"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="3dp"
+                    android:text="我"
+                    android:textColor="#9A9A9A"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
