@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -22,6 +23,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends FragmentActivity implements View.OnClickListener {
+
+
+    private TextView txt_title;
+    private ImageView img_right;
+
 
    private ViewPager viewPager;
     private FragmentPagerAdapter mAdapter;
@@ -74,6 +80,9 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     }
 
     private void initView() {
+       //初始化控件
+        txt_title = findViewById(R.id.txt_title);
+        img_right = findViewById(R.id.img_right);
 
         //初始化viewpager
         viewPager = (ViewPager) findViewById(R.id.id_viewpager);
@@ -148,25 +157,32 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     public void setTab(int i) {
 
         resetImgs();
-
+        img_right.setVisibility(View.GONE);
         switch (i){
-
             case 0:
                 //微信图标渐变色
                  mImgWeixin.setImageResource(R.drawable.weixin_pressed);
                 tv_weixin.setTextColor(getResources().getColor(R.color.textpressed));
+                txt_title.setText("微信");
+                img_right.setVisibility(View.VISIBLE);
+                img_right.setImageResource(R.drawable.icon_add);
                  break;
             case 1:
                  mImgContactlist.setImageResource(R.drawable.contact_list_pressed);
                 tv_contactlist.setTextColor(getResources().getColor(R.color.textpressed));
+                txt_title.setText("通讯录");
+                img_right.setVisibility(View.VISIBLE);
+                img_right.setImageResource(R.drawable.icon_groupinfo);
                 break;
             case 2:
                 mImgFriends.setImageResource(R.drawable.find_pressed);
                 tv_friends.setTextColor(getResources().getColor(R.color.textpressed));
+                txt_title.setText("发现");
                 break;
             case 3:
                 mImgProfiles.setImageResource(R.drawable.profile_pressed);
                 tv_profile.setTextColor(getResources().getColor(R.color.textpressed));
+                txt_title.setText("我");
                 break;
         }
 
@@ -191,9 +207,11 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
+
         switch (v.getId()){
 
             case R.id.id_tab_weixin:
+
                 setSelected(0);
                 break;
             case R.id.id_tab_contactlist:

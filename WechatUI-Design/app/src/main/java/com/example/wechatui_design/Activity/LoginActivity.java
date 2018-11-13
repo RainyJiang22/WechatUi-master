@@ -2,7 +2,6 @@ package com.example.wechatui_design.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -72,6 +71,9 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
     }
 
 
+    /**
+     * 设置监听器
+     */
     protected void setListener() {
         img_back.setOnClickListener(this);
         btn_login.setOnClickListener(this);
@@ -99,9 +101,16 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
            case R.id.btn_more:
                break;
            case R.id.btn_login:
-               startActivity(new Intent(LoginActivity.this, MainActivity.class));
+
+               //获取输入的Editext值
+               String account = et_usertel.getText().toString();
+
+               Intent intent = new Intent();
+               intent.putExtra("account",account);
+               intent.setClass(LoginActivity.this,MainActivity.class);
+               startActivity(intent);
                overridePendingTransition(R.anim.push_up_in,R.anim.push_up_out);
-               Toast.makeText(this,"登录成功",Toast.LENGTH_LONG).show();
+               Toast.makeText(this,"登录成功",Toast.LENGTH_SHORT).show();
                break;
        }
     }
