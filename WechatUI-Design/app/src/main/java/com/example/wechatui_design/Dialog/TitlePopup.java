@@ -35,6 +35,7 @@ public class TitlePopup extends PopupWindow {
     // 列表弹窗的间隔
     protected final int LIST_PADDING = 10;
 
+
     // 实例化一个矩形
     private Rect mRect = new Rect();
 

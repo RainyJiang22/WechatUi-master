@@ -42,8 +42,8 @@ public class TheListAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        view = View.inflate(context, R.layout.wechat_message,null);
-      ImageView imageView =  view.findViewById(R.id.icon_photo);
-        return null;
+//        view = View.inflate(context, R.layout.wechat_message,null);
+//      ImageView imageView =  view.findViewById(R.id.icon_photo);
+       return null;
     }
 }
