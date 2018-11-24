@@ -1,12 +1,17 @@
 package com.example.wechatui_design.Activity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
+import android.text.InputFilter;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -14,8 +19,10 @@ import android.widget.Toast;
 
 import com.example.wechatui_design.Common.BaseActivity;
 import com.example.wechatui_design.Common.Utils;
+import com.example.wechatui_design.List.MessageListActivity;
 import com.example.wechatui_design.MainActivity;
 import com.example.wechatui_design.R;
+import com.example.wechatui_design.sqlite.MessagesqlliteActivity;
 
 /**
  * Created by Jacky on 2018/10/26.
@@ -32,16 +39,53 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
     private Button btn_help;
     private EditText et_usertel, et_password;
 
+    private CheckBox mermorize_password,auto_login;
+    private String userNameValue,passwordValue;
+    private SharedPreferences sp;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.wechat_login);
+        //获取实例对象
+        sp = this.getSharedPreferences("userinfo", Context.MODE_PRIVATE);
+
         initControl();
         initData();
         initView();
         setListener();
+
+
+        //监听记住密码多选框按钮事件
+        mermorize_password.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (mermorize_password.isChecked()){
+                    System.out.println("记住密码已选中");
+                    sp.edit().putBoolean("ISCHECK",true).commit();
+                }else{
+                    System.out.println("记住密码未选中");
+                    sp.edit().putBoolean("ISCHECK",false).commit();
+                }
+            }
+        });
+
+
+        //监听自动登录多选框按钮事件
+        auto_login.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (auto_login.isChecked()){
+                    System.out.println("自动登录已选中");
+                    sp.edit().putBoolean("AUTO_ISCHECK",true).commit();
+                }else{
+                    System.out.println("自动登录未选中");
+                    sp.edit().putBoolean("AUTO_ISCHECK",false).commit();
+                }
+            }
+        });
     }
 
 
@@ -60,6 +104,32 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
         btn_help = (Button) findViewById(R.id.btn_more);
         et_usertel = (EditText) findViewById(R.id.et_usertel);
         et_password = (EditText) findViewById(R.id.et_password);
+
+        mermorize_password = (CheckBox) findViewById(R.id.memorize_password);
+        auto_login = (CheckBox) findViewById(R.id.auto_login);
+
+
+       if (sp.getBoolean("ISCHECK",false)){
+           //设置默认是记录密码状态
+           mermorize_password.setChecked(true);
+           et_usertel.setText(sp.getString("USER_NAME",""));
+           et_password.setText(sp.getString("PASSWORD",""));
+        //   et_password.setText(sp.getString("PASSWORD",""));
+
+           //判断自动登录多选框状态
+           if (sp.getBoolean("AUTO_ISCHECK",false))
+           {
+               //设置默认是自动登录状态
+               //跳转页面
+               Intent intent = new Intent(LoginActivity.this,MessageListActivity.class);
+               overridePendingTransition(R.anim.push_up_in,R.anim.push_up_out);
+               startActivity(intent);
+           }
+       }
+
+
+
+
     }
 
     protected void initView() {
@@ -81,6 +151,8 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
         btn_help.setOnClickListener(this);
         et_usertel.addTextChangedListener(new TextChange());
         et_password.addTextChangedListener(new TextChange());
+
+
     }
 
 
@@ -103,14 +175,29 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
            case R.id.btn_login:
 
                //获取输入的Editext值
-               String account = et_usertel.getText().toString();
+//               String account = et_usertel.getText().toString();
+//               Intent intent = new Intent();
+//               intent.putExtra("account",account);
+               userNameValue = et_usertel.getText().toString();
+               passwordValue = et_password.getText().toString();
+               if (userNameValue.equals("user")&& passwordValue.equals("123456")){
+                   Toast.makeText(this,"登录成功",Toast.LENGTH_SHORT).show();
+                   if (mermorize_password.isChecked()){
+                       //记住用户，密码
+                       SharedPreferences.Editor editor = sp.edit();
+                       editor.putString("USER_NAME",userNameValue);
+                       editor.putString("PSSWORD",passwordValue);
+                       editor.commit();
+                   }
+                   //跳转页面
+                   Intent intent =  new Intent();
+                   intent.setClass(LoginActivity.this,MainActivity.class);
+                   startActivity(intent);
+                   overridePendingTransition(R.anim.push_up_in,R.anim.push_up_out);
 
-               Intent intent = new Intent();
-               intent.putExtra("account",account);
-               intent.setClass(LoginActivity.this,MainActivity.class);
-               startActivity(intent);
-               overridePendingTransition(R.anim.push_up_in,R.anim.push_up_out);
-               Toast.makeText(this,"登录成功",Toast.LENGTH_SHORT).show();
+               } else{
+                   Toast.makeText(this,"用户或密码错误，请重新登录",Toast.LENGTH_SHORT).show();
+               }
                break;
        }
     }

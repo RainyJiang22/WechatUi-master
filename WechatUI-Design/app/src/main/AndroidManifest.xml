@@ -9,12 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.MessageActivity">
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".sqlite.MessagesqlliteActivity">
+        </activity>
+
+        <activity android:name=".Activity.ChatActivity">
+        </activity>
+
+        <activity android:name=".List.MessageListActivity">
+        </activity>
+
+        <activity android:name=".Activity.MessageActivity">
+        </activity>
+
 
         <activity android:name=".MainActivity">
         </activity>
@@ -23,6 +36,8 @@
         </activity>
 
         <!--<activity android:name=".Common.BaseActivity">-->
+
+
         <!--</activity>-->
 
         <activity android:name=".Activity.RegisterActivity">

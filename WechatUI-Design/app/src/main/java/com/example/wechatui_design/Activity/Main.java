@@ -24,5 +24,8 @@ public class Main extends AppCompatActivity {
         Intent intent = getIntent();
         String num1 = intent.getStringExtra("account");
         account_view.setText(num1);
+
+
+
     }
 }

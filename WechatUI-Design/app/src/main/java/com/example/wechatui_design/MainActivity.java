@@ -7,12 +7,16 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.wechatui_design.Dialog.ActionItem;
+import com.example.wechatui_design.Dialog.TitlePopup;
 import com.example.wechatui_design.fragment.ContactlistFragment;
 import com.example.wechatui_design.fragment.FriendFragment;
 import com.example.wechatui_design.fragment.ProfileFragment;
@@ -27,6 +31,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
     private TextView txt_title;
     private ImageView img_right;
+    private TextView txt_left;
 
 
    private ViewPager viewPager;
@@ -54,6 +59,12 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private TextView tv_profile;
 
 
+    //定义标题栏弹窗
+    private TitlePopup titlePopup;
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,7 +81,11 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         initEvent();
 
         setSelected(0);
+
+        initPopWindow();
     }
+
+
 
     private void initEvent() {
           mTabWeixin.setOnClickListener(this);
@@ -83,6 +98,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
        //初始化控件
         txt_title = findViewById(R.id.txt_title);
         img_right = findViewById(R.id.img_right);
+        txt_left = findViewById(R.id.txt_left);
 
         //初始化viewpager
         viewPager = (ViewPager) findViewById(R.id.id_viewpager);
@@ -154,6 +170,34 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         });
     }
 
+    private void initPopWindow() {
+        //实例化标题栏弹窗
+       titlePopup = new TitlePopup(this, ViewGroup.LayoutParams.WRAP_CONTENT,
+               ViewGroup.LayoutParams.WRAP_CONTENT);
+        titlePopup.setItemOnClickListener(onitemClick);
+        //给标题栏弹窗添加子类
+        titlePopup.addAction(new ActionItem(this,"发起群聊",R.drawable.icon_menu_group));
+        titlePopup.addAction(new ActionItem(this,"添加朋友",R.drawable.icon_menu_addfriend));
+        titlePopup.addAction(new ActionItem(this,"扫一扫",R.drawable.icon_menu_sao));
+        titlePopup.addAction(new ActionItem(this, "收钱", R.drawable.abv));
+
+
+    }
+
+
+    private TitlePopup.OnItemOnClickListener onitemClick = new TitlePopup.OnItemOnClickListener() {
+
+        @Override
+        public void onItemClick(ActionItem item, int position) {
+            // mLoadingDialog.show();
+            switch (position) {
+                case 1:
+                    break;
+            }
+        }
+    };
+
+
     public void setTab(int i) {
 
         resetImgs();
@@ -163,25 +207,33 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 //微信图标渐变色
                  mImgWeixin.setImageResource(R.drawable.weixin_pressed);
                 tv_weixin.setTextColor(getResources().getColor(R.color.textpressed));
-                txt_title.setText("微信");
+                txt_title.setVisibility(View.GONE);
+                txt_left.setText("微信");
+                txt_left.setVisibility(View.VISIBLE);
                 img_right.setVisibility(View.VISIBLE);
                 img_right.setImageResource(R.drawable.icon_add);
                  break;
             case 1:
                  mImgContactlist.setImageResource(R.drawable.contact_list_pressed);
                 tv_contactlist.setTextColor(getResources().getColor(R.color.textpressed));
+                txt_title.setVisibility(View.VISIBLE);
+                txt_left.setVisibility(View.GONE);
                 txt_title.setText("通讯录");
                 img_right.setVisibility(View.VISIBLE);
-                img_right.setImageResource(R.drawable.icon_groupinfo);
+                img_right.setImageResource(R.drawable.icon_add);
                 break;
             case 2:
                 mImgFriends.setImageResource(R.drawable.find_pressed);
                 tv_friends.setTextColor(getResources().getColor(R.color.textpressed));
+                txt_title.setVisibility(View.VISIBLE);
+                txt_left.setVisibility(View.GONE);
                 txt_title.setText("发现");
                 break;
             case 3:
                 mImgProfiles.setImageResource(R.drawable.profile_pressed);
                 tv_profile.setTextColor(getResources().getColor(R.color.textpressed));
+                txt_title.setVisibility(View.VISIBLE);
+                txt_left.setVisibility(View.GONE);
                 txt_title.setText("我");
                 break;
         }

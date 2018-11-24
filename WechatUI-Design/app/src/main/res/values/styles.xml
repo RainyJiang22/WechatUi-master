@@ -32,4 +32,9 @@
         <item name="android:paddingRight">6.0dip</item>
         <item name="android:focusable">false</item>
     </style>
+
+    <style name="AnimHead" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/head_in</item>
+        <item name="android:windowExitAnimation">@anim/head_out</item>
+    </style>
 </resources>

@@ -17,7 +17,7 @@ public class MySqliteHelper extends SQLiteOpenHelper {
      * @param factory   表示数据库的游标工厂
      * @param version   表示数据库的版本
      */
-    public static final String CREATE_USERDATA = "create table ContactData(name varchar(200) primary key, message varchar(200),date varchar(200))";
+
 
 
     public MySqliteHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
@@ -36,7 +36,7 @@ public class MySqliteHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
 
-
+        String CREATE_USERDATA = "create table "+Constant.TABLE_NAME+"(_id Integer,imageId BLOB, name varchar(200) primary key, message varchar(200),date varchar(200))";
         sqLiteDatabase.execSQL(CREATE_USERDATA);
     }
 

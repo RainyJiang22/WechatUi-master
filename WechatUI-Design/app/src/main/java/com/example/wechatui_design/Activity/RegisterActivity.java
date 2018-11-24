@@ -48,7 +48,7 @@ public class RegisterActivity extends AppCompatActivity  implements View.OnClick
         initData();
         setListener();
 
-        initUserList();
+      //  initUserList();
     }
 
 

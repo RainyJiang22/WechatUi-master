@@ -1,37 +1,38 @@
 package com.example.wechatui_design.List;
 
+import android.widget.ImageView;
+
 /**
  * Created by Jacky on 2018/11/13.
  */
 
 public class Message {
-    private String lad;
+
+    private int ImageId;
     private String name;
     private String messeng;
     private String date;
 
-    public String getLad() {
-        return lad;
+    public Message(int imageId, String name, String messeng, String date) {
+        ImageId = imageId;
+        this.name = name;
+        this.messeng = messeng;
+        this.date = date;
     }
-    public void setLad(String lad) {
-        this.lad = lad;
+
+    public int getImageId() {
+        return ImageId;
     }
+
     public String getName() {
         return name;
     }
-    public void setName(String name) {
-        this.name = name;
-    }
+
     public String getMesseng() {
         return messeng;
-    }
-    public void setMesseng(String messeng) {
-        this.messeng = messeng;
     }
     public String getDate() {
         return date;
     }
-    public void setDate(String date) {
-        this.date = date;
-    }
+
 }
