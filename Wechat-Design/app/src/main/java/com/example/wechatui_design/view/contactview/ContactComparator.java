@@ -9,6 +9,7 @@ import java.util.Comparator;
 public class ContactComparator  implements Comparator<String> {
 
     @Override
+    //比较
     public int compare(String o1, String o2) {
         int c1 = (o1.charAt(0) + "").toUpperCase().hashCode();
         int c2 = (o2.charAt(0) + "").toUpperCase().hashCode();
@@ -20,6 +21,8 @@ public class ContactComparator  implements Comparator<String> {
         } else if (!c1Flag && c2Flag) {
             return -1;
         }
+
+
 
         return c1 - c2;
     }
