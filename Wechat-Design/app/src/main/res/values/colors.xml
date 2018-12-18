@@ -112,4 +112,6 @@
     <color name="gray2">#ffeef2fb</color>
     <color name="textpressed">#45C01A</color>
     <color name="textnormal">#9A9A9A</color>
+
+    <color name="common_top_bar_blue">#22292c</color>
 </resources>
