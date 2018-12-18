@@ -47,11 +47,11 @@
         </activity>
 
 
-        <activity android:name=".Activity.MyInfoActivity">
-        </activity>
+        <!--<activity android:name=".Activity.MyInfoActivity">-->
+        <!--</activity>-->
 
-        <activity android:name=".Activity.MyInfoMoreActivity">
-        </activity>
+        <!--<activity android:name=".Activity.MyInfoMoreActivity">-->
+        <!--</activity>-->
 
 
         <activity android:name=".homework.SecondActivity">

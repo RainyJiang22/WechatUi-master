@@ -24,17 +24,15 @@ public class ProfileFragment  extends Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,  Bundle savedInstanceState) {
-       View view = inflater.inflate(R.layout.fragment_profile,container,false);
+       return inflater.inflate(R.layout.fragment_profile,container,false);
 
-       re_myinfo = view.findViewById(R.id.re_myinfo);
-       re_myinfo.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view) {
-               Intent intent = new Intent(getActivity(),MyInfoActivity.class);
-               startActivity(intent);
-           }
-       });
-
-       return view;
+//       re_myinfo = view.findViewById(R.id.re_myinfo);
+//       re_myinfo.setOnClickListener(new View.OnClickListener() {
+//           @Override
+//           public void onClick(View view) {
+//               Intent intent = new Intent(getActivity(),MyInfoActivity.class);
+//               startActivity(intent);
+//           }
+//       });
     }
 }
