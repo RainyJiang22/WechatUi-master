@@ -4,13 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+<include layout="@layout/wechat_search"/>
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:gravity="center"
-        android:text="This is contactlist tab"
-        android:textSize="30sp"
-        android:textStyle="bold"/>
 
 </LinearLayout>
