@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/Toast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="弹出吐司提示"
+        />
+    <Button
+        android:id="@+id/page_jump"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="显示跳转到SECONDACTIVITY"
+        />
+    <Button
+        android:id="@+id/page_jump2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="隐式跳转到SecondActivity" />
+
+    <Button
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="隐式跳转到拨号界面"/>
+
+    <Button
+        android:id="@+id/browser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="隐式跳转到浏览器"/>
+
+    <Button
+        android:id="@+id/input_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Intent携带数据" />
+
+    <Button
+        android:id="@+id/return_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Intent返回数据"/>
+    
+    <Button
+        android:id="@+id/set_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发送短信"/>
+    <Button
+        android:id="@+id/set_Contactlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="调用搜索"/>
+
+    <Button
+        android:id="@+id/set_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="调用电子邮件"
+        />
+    <Button
+        android:id="@+id/set_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="显示地图"/>
+</LinearLayout>

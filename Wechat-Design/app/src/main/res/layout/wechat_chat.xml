@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/wechat_title"/>
+
+
+     <ListView
+         android:id="@+id/list_item"
+         android:layout_below="@+id/top_bar"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:scrollbars="none"
+         android:divider="@android:color/transparent"
+         android:layout_above="@+id/bar_bottom"
+         android:dividerHeight="15dp"
+         >
+     </ListView>
+     
+    
+    <LinearLayout
+        android:id="@+id/bar_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_set_mode_voice"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="6dp"
+            android:background="@drawable/chatting_setmode_voice_btn_normal"
+            android:onClick="setModeVoice"
+            android:visibility="visible" />
+
+
+        <EditText
+            android:id="@+id/edit_send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="填写消息"
+            android:layout_marginLeft="5dp"
+            android:textColorHint="#95A1AA"
+            android:textColor="@android:color/black"
+            android:layout_weight="7" />
+
+        <ImageView
+            android:id="@+id/iv_emoticons_normal"
+            android:layout_width="24dip"
+            android:layout_height="24dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical|right"
+            android:layout_margin="1dip"
+            android:scaleType="fitCenter"
+            android:src="@drawable/chatting_biaoqing_btn_normal"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送"
+            android:textSize="17sp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:textColor="#576B95"/>
+    </LinearLayout>
+
+</RelativeLayout>

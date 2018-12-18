@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="80dp">
+
+<ImageView
+    android:id="@+id/icon_image"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:src="@drawable/image3"
+    android:scaleType="centerCrop"
+    android:layout_margin="10dp"
+    android:layout_centerVertical="true"
+    android:layout_alignParentStart="true" />
+
+
+
+
+<TextView
+    android:id="@+id/icon_name"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="老州"
+    android:textSize="17sp"
+    android:layout_gravity="center_horizontal"
+    android:textStyle="bold"
+    android:layout_marginStart="12dp"
+    android:layout_alignTop="@+id/icon_image"
+    android:layout_toEndOf="@+id/icon_image" />
+
+<TextView
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="最近过的还好吗？"
+    android:textSize="13sp"
+    android:id="@+id/icon_message"
+    android:layout_alignBottom="@+id/icon_image"
+    android:layout_alignStart="@+id/icon_name" />
+
+<TextView
+    android:id="@+id/icon_date"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="周三"
+    android:textSize="13sp"
+    android:layout_marginEnd="18dp"
+    android:layout_alignBottom="@+id/icon_name"
+    android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
