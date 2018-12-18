@@ -66,6 +66,8 @@ public class MyRecyclerView extends RecyclerView {
 
     /**
      *滚动的时候，判断当前第一个view是否发生变化，发生的时候才回调
+     * 回调函数需要注意的点:
+     * 1.当参数不能返回null值，一旦返回null值不能滑动
      * @param e
      * @return
      */
