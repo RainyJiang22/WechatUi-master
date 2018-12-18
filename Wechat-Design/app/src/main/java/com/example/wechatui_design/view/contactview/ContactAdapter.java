@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.wechatui_design.R;
+import com.example.wechatui_design.fragment.ContactlistFragment;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -28,7 +30,7 @@ public class ContactAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         ITEM_TYPE_CONTACT
     }
 
-    public ContactAdapter(Context context, String[] contactNames) {
+    public ContactAdapter(ContactlistFragment context, String[] contactNames) {
         mContext = context;
         mLayoutInflater = LayoutInflater.from(context);
         mContactNames = contactNames;
