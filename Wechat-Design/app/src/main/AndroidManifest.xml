@@ -46,6 +46,14 @@
         <activity android:name=".Activity.Main">
         </activity>
 
+
+        <activity android:name=".Activity.MyInfoActivity">
+        </activity>
+
+        <activity android:name=".Activity.MyInfoMoreActivity">
+        </activity>
+
+
         <activity android:name=".homework.SecondActivity">
             <action android:name="com.example.wechatui_design.homework.ACTION_START" />
             <category android:name="android.intent.category.DEFAULT" />
