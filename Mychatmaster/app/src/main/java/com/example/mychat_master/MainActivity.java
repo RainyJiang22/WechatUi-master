@@ -205,9 +205,9 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 //微信图标渐变色
                  mImgWeixin.setImageResource(R.drawable.weixin_pressed);
                 tv_weixin.setTextColor(getResources().getColor(R.color.textpressed));
-                txt_title.setVisibility(View.GONE);
-                txt_left.setText("微信");
-                txt_left.setVisibility(View.VISIBLE);
+                txt_title.setText("微信");
+                txt_title.setVisibility(View.VISIBLE);
+                txt_left.setVisibility(View.GONE);
                 img_right.setVisibility(View.VISIBLE);
                 img_right.setImageResource(R.drawable.icon_add);
                  break;
@@ -218,7 +218,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 txt_left.setVisibility(View.GONE);
                 txt_title.setText("通讯录");
                 img_right.setVisibility(View.VISIBLE);
-                img_right.setImageResource(R.drawable.icon_add);
+                img_right.setImageResource(R.drawable.icon_groupinfo);
                 break;
             case 2:
                 mImgFriends.setImageResource(R.drawable.find_pressed);
