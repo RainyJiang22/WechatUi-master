@@ -15,7 +15,7 @@
         android:visibility="gone"
         android:layout_marginLeft="10dp"
         android:contentDescription="微信"
-        android:src="@drawable/icon_back" />
+        android:src="@drawable/top_bar_back" />
 
     <!--主页面左边标题-->
     <TextView
