@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 
 import com.example.mychat_master.Common.ActionItem;
+import com.example.mychat_master.Common.AddPopWindow;
 import com.example.mychat_master.Common.TitlePopup;
 import com.example.mychat_master.Fragment.ContactlistFragment;
 import com.example.mychat_master.Fragment.FindFragment;
@@ -210,6 +211,13 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 txt_left.setVisibility(View.GONE);
                 img_right.setVisibility(View.VISIBLE);
                 img_right.setImageResource(R.drawable.icon_add);
+                img_right.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        AddPopWindow addPopWindow =  new AddPopWindow(MainActivity.this);
+                        addPopWindow.showPopupWindow(img_right);
+                    }
+                });
                  break;
             case 1:
                  mImgContactlist.setImageResource(R.drawable.contact_list_pressed);

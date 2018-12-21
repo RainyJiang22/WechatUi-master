@@ -15,8 +15,7 @@ android:layout_height="80dp">
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/image3"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        android:src="@drawable/image3" />
 
 
 
@@ -53,4 +52,13 @@ android:layout_height="80dp">
     android:layout_alignBottom="@+id/icon_name"
     android:layout_alignParentEnd="true" />
 
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#C0C0C0"
+        android:layout_alignLeft="@id/icon_image"
+        android:layout_marginTop="74dp"
+        android:layout_alignRight="@id/icon_date"
+        />
 </RelativeLayout>
