@@ -17,8 +17,17 @@ public class AddPopWindow extends PopupWindow {
 
 
     public AddPopWindow(final Activity context){
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
+
+        //对于没有继承相关Activity的java文件,可以使用Layoutflater，可以使用LayoutFlater找相关布局文件
+
+        /**
+         * 另外getSystemService()是Android很重要的一个API，它是Activity的一个方法，
+         * 根据传入的NAME来取得对应的Object，然后转换成相应的服务对象。
+         * 以下介绍系统相应的服务。
+         */
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        //取得自定义的view
          contentView = inflater.inflate(R.layout.itempopup_add,null);
 
 

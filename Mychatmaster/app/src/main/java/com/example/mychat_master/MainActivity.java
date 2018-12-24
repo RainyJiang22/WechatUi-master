@@ -226,7 +226,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                 txt_left.setVisibility(View.GONE);
                 txt_title.setText("通讯录");
                 img_right.setVisibility(View.VISIBLE);
-                img_right.setImageResource(R.drawable.icon_groupinfo);
+                img_right.setImageResource(R.drawable.icon_add);
                 break;
             case 2:
                 mImgFriends.setImageResource(R.drawable.find_pressed);
