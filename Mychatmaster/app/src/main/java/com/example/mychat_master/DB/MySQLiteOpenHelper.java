@@ -7,10 +7,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import com.example.mychat_master.R;
 
-/**
- * Created by Administrator on 2018/6/1.
- */
-
 public class MySQLiteOpenHelper extends SQLiteOpenHelper {
     //参数context:上下文环境
     //参数name:数据库名称
@@ -30,6 +26,11 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
                 "friend varchar(10)," +
                 "msg varchar(50)," +
                 "time varchar(10))");
+
+        //创建表user
+        db.execSQL("create table username(" +
+                " name varchar(30) primary key," +
+                "password varchar(30))");
 
         ContentValues cv=new ContentValues();
         //cv.put(字段名，字段值)

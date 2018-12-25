@@ -98,7 +98,6 @@ public class WeixinFragment extends Fragment {
                 //通过adapter更新RecyclerView的数据内容
                 adapter.notifyDataSetChanged();
             }
-
         }
     }
 

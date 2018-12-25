@@ -25,15 +25,14 @@
 
         <activity android:name=".Activity.RegisterActivity">
         </activity>
-
         <activity android:name=".Activity.MyInfoActivity">
         </activity>
-
         <activity android:name=".Activity.MyInfoMoreActivity">
         </activity>
-
          <activity android:name=".Activity.ChatActivity">
          </activity>
+        <activity android:name=".Activity.SettingActivity">
+        </activity>
 
     </application>
 
