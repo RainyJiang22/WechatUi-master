@@ -32,7 +32,8 @@
         <activity android:name=".Activity.MyInfoMoreActivity">
         </activity>
 
-
+         <activity android:name=".Activity.ChatActivity">
+         </activity>
 
     </application>
 

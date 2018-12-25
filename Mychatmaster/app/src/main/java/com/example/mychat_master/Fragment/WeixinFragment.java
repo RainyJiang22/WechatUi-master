@@ -1,5 +1,6 @@
 package com.example.mychat_master.Fragment;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -72,6 +73,34 @@ public class WeixinFragment extends Fragment {
         db.close();
     }
 
+    @Override
+   public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode==1&&resultCode==10){
+            //获取ChatActivity传递过来的数据
+            String message=data.getStringExtra("msg");
+            String friend=data.getStringExtra("friend");
+            //遍历集合msgList
+            //将集合中好友姓名为传递过来好友姓名的Msg对象的消息内容改为message
+            for(Message msg:msglist){
+                if(msg.getFriend().equals(friend)){
+                    msg.setMsg(message);
+                }
+            }
+            if (message !=  null){
+                //打开数据库
+                SQLiteDatabase db=helper.getWritableDatabase();
+                ContentValues cv=new ContentValues();
+                cv.put("msg",message);
+                db.update("message",cv,"friend=?",new String[]{friend});
+                //关闭数据库
+                db.close();
+                //通过adapter更新RecyclerView的数据内容
+                adapter.notifyDataSetChanged();
+            }
+
+        }
+    }
 
     @Override
     public void onDestroy() {
