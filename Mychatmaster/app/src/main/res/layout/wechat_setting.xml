@@ -11,7 +11,7 @@
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:background="@color/common_top_bar_blue" >
+        android:background="@color/colorPrimary" >
 
         <ImageView
             android:id="@+id/iv_back"

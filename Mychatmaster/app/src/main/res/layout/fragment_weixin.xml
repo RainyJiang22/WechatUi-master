@@ -13,7 +13,7 @@
         <!--android:textSize="30sp"-->
         <!--android:textStyle="bold"/>-->
 
-    <include layout="@layout/wechat_message"/>
+    <include layout="@layout/wechat_messagelist"/>
 
 
 </LinearLayout>
