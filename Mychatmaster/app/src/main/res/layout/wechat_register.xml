@@ -56,7 +56,6 @@
                 android:layout_centerVertical="true"
                 android:background="@drawable/editext_login"
                 android:hint="你的注册账号"
-                android:inputType="phone"
                 android:paddingLeft="90dp"
                 android:singleLine="true"
                 android:maxLength="11"

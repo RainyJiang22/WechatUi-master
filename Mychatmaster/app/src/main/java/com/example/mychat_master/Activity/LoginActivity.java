@@ -1,9 +1,15 @@
 package com.example.mychat_master.Activity;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -17,6 +23,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mychat_master.Common.Utils;
+import com.example.mychat_master.DB.MySQLiteOpenHelper;
 import com.example.mychat_master.MainActivity;
 import com.example.mychat_master.R;
 
@@ -30,6 +37,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private TextView txt_title;
     private ImageView img_back;
 
+    //登录按钮
     private Button btn_login;
     private Button btn_register;
     private Button btn_qtfindpassword;
@@ -40,6 +48,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private String userNameValue,passwordValue;
     private SharedPreferences sp;
 
+    //数据表名
+    private static final String TABLE_NAME = "username";
+    private MySQLiteOpenHelper sqLiteOpenHelper;
+    private SQLiteDatabase db;
 
 
 
@@ -178,27 +190,85 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 //               intent.putExtra("account",account);
                userNameValue = et_usertel.getText().toString();
                passwordValue = et_password.getText().toString();
-               if (userNameValue.equals("user")&& passwordValue.equals("123456")){
-                   Toast.makeText(this,"登录成功",Toast.LENGTH_SHORT).show();
-                   if (mermorize_password.isChecked()){
-                       //记住用户，密码
-                       SharedPreferences.Editor editor = sp.edit();
-                       editor.putString("USER_NAME",userNameValue);
-                       editor.putString("PSSWORD",passwordValue);
-                       editor.commit();
-                   }
-                   //跳转页面
-                   Intent intent =  new Intent();
-                   intent.setClass(LoginActivity.this,MainActivity.class);
-                   startActivity(intent);
-                   overridePendingTransition(R.anim.push_up_in,R.anim.push_up_out);
-
-               } else{
-                   Toast.makeText(this,"用户或密码错误，请重新登录",Toast.LENGTH_SHORT).show();
+               if (userNameValue.equals("")||passwordValue.equals("")){
+                    //弹出信息框
+                   new AlertDialog.Builder(LoginActivity.this).setTitle("Error")
+                           .setMessage("账号或密码不能为空").setPositiveButton("确定",null)
+                           .show();
+               }else{
+                    isUserinfo(userNameValue,passwordValue);
                }
                break;
        }
     }
+
+
+    /**
+     * 根据数据库sqlite中的表数据来进行判断
+     * @param userNameValue
+     * @param passwordValue
+     */
+    private Boolean isUserinfo(String userNameValue, String passwordValue) {
+
+        final String userNameString = userNameValue;
+        final String passwordString = passwordValue;
+        sqLiteOpenHelper = new MySQLiteOpenHelper(LoginActivity.this,"ContactMessage.db",null,1);
+        db  = sqLiteOpenHelper.getWritableDatabase();
+        try{
+            Cursor cursor = db.query(TABLE_NAME,new String[]{"name","password"},"name=?",new String[]{userNameString},null,null,"password");
+            while(cursor.moveToNext())
+            {
+                String password = cursor.getString(cursor.getColumnIndex("password"));
+
+                if (passwordString.equals(password))
+                {
+                    new AlertDialog.Builder(LoginActivity.this).setTitle("正确")
+                            .setMessage("成功登录").setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            if (mermorize_password.isChecked()){
+                                //记住用户，密码
+                                SharedPreferences.Editor editor = sp.edit();
+                                editor.putString("USER_NAME",userNameString);
+                                editor.putString("PSSWORD",passwordString);
+                                editor.commit();
+                            }
+                            //跳转到登录界面
+                            Intent intent =  new Intent();
+                            intent.setClass(LoginActivity.this,MainActivity.class);
+                            overridePendingTransition(R.anim.push_up_in,R.anim.push_up_out);
+                            startActivity(intent);
+                        }
+                    }).show();
+
+                    break;
+                }
+                else{
+                    Toast.makeText(this, "用户名密码不正确",Toast.LENGTH_LONG).show();
+                    break;
+                }
+            }
+
+        }catch (SQLiteException e){
+          CreateTable();
+        }
+       return false;
+    }
+
+    /**
+     * 查看数据库是否有username的表，如果有，则不执行下列操作，如果没有则执行下列操作
+     */
+    private void CreateTable() {
+        // TODO Auto-generated method stub
+        String sql = "CREATE TABLE IF NOT EXISTS " + TABLE_NAME
+                + " (name varchar(30) primary key,password varchar(30));";
+        try{
+            db.execSQL(sql);
+        }catch(SQLiteException ex){
+
+        }
+    }
+
 
 
     /**

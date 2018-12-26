@@ -2,6 +2,7 @@ package com.example.mychat_master.Activity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mychat_master.Common.Utils;
+import com.example.mychat_master.DB.MySQLiteOpenHelper;
 import com.example.mychat_master.MainActivity;
 import com.example.mychat_master.R;
 
@@ -32,7 +34,13 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private EditText et_usertel,et_passsword;
     private EditText et_code;
 
+    //倒计时器
     private MyCount mc;
+
+    private MySQLiteOpenHelper helper;
+    private static final String TABLE_NAME="username";
+    private SQLiteDatabase db;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,9 +81,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     protected void setListener() {
            image_back.setOnClickListener(this);
-
             btn_send.setOnClickListener(this);
-
             btn_register.setOnClickListener(this);
            et_usertel.addTextChangedListener(new TelTextChange());
            et_passsword.addTextChangedListener(new TextChange());
@@ -95,20 +101,30 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                        break;
 
               case R.id.btn_register:
-                  startActivity(new Intent(RegisterActivity.this, MainActivity.class));
-                  overridePendingTransition(R.anim.push_up_in,R.anim.push_up_out);
-                  Toast.makeText(this,"注册成功",Toast.LENGTH_SHORT).show();
-                  break;
+                 String nameString = et_usertel.getText().toString();
+                 String passString = et_passsword.getText().toString();
+                if (nameString.equals("")||passString.equals("")){
+                    Toast.makeText(this,"注册信息不能为空", Toast.LENGTH_LONG).show();
+
+                }
+                else {
+                    helper = new MySQLiteOpenHelper(RegisterActivity.this, "ContactMessage.db", null, 1);
+                    db = helper.getWritableDatabase();
+                    db.execSQL("insert into username (name,password) values(?,?)", new String[]{nameString, passString});
+                    Toast.makeText(this, "注册成功", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(RegisterActivity.this, MainActivity.class));
+                    overridePendingTransition(R.anim.push_up_in, R.anim.push_up_out);
+                }
+                 break;
               default:
                   break;
           }
     }
 
 
-
-
-
-
+    /**
+     * 手机号注册验证（现已失效)
+     */
     //手机号注册验证EditText监听器
     class  TelTextChange implements TextWatcher {
 
