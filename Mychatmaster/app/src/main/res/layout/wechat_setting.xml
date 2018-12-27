@@ -210,7 +210,7 @@
 
 
     <RelativeLayout
-        android:id="@+id/re_aboutwechat"
+        android:id="@+id/re_outwechat"
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="48dp"
@@ -218,13 +218,13 @@
         android:clickable="true" >
 
         <TextView
-            android:id="@+id/tv_temp_adoutwecaht"
+            android:id="@+id/tv_temp_outline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="20dp"
-            android:text="关于微信"
+            android:text="强制下线"
             android:textColor="#353535"
             android:textSize="16sp" />
 
@@ -254,6 +254,7 @@
             android:text="退出"
             android:textColor="#353535"
             android:textSize="16sp" />
+
 
         <View
             android:layout_width="match_parent"

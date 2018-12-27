@@ -34,6 +34,9 @@
         <activity android:name=".Activity.SettingActivity">
         </activity>
 
+        <activity android:name=".Activity.BaseActivity">
+        </activity>
+
     </application>
 
 </manifest>
