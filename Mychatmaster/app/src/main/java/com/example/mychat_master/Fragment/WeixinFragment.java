@@ -32,6 +32,7 @@ public class WeixinFragment extends Fragment {
      private MessageAdapter adapter;
      private MySQLiteOpenHelper helper;
 
+     public static final String ARGUMENT = "argument";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -73,13 +74,23 @@ public class WeixinFragment extends Fragment {
         db.close();
     }
 
+    /**
+     * 由于是从activity中传值到fragment
+     * @param requestCode
+     * @param resultCode
+     * @param data
+     */
     @Override
    public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        Bundle bundle = data.getExtras();
         if(requestCode==1&&resultCode==10){
             //获取ChatActivity传递过来的数据
-            String message=data.getStringExtra("msg");
-            String friend=data.getStringExtra("friend");
+            WeixinFragment weixinFragment = new WeixinFragment();
+
+          String message = bundle.getString("msg");
+         String friend = bundle.getString("friend");
+         weixinFragment.setArguments(bundle);
             //遍历集合msgList
             //将集合中好友姓名为传递过来好友姓名的Msg对象的消息内容改为message
             for(Message msg:msglist){

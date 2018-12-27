@@ -37,6 +37,7 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
    private ListView chatListView;
    private Button send;
    private String friend;
+   private String message;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +67,7 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
         ////获取上一界面传递过来的数据显示在TextView上
         Intent intent = getIntent();
       friend = intent.getStringExtra("friend");
-
+      message = intent.getStringExtra("msg");
         //将标题变为联系人名字
         txt_left = (TextView) findViewById(R.id.txt_left);
         txt_left.setVisibility(View.VISIBLE);
@@ -99,6 +100,9 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
                     newsAdapter.notifyDataSetChanged();
                     chatListView.setSelection(newsArrayList.size());
                     chatEditView.setText("");
+                    //EeventBus
+                    Bundle bundle = new Bundle();
+                    bundle.getString("msg",content);
                 }
             }
         });
@@ -108,11 +112,11 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onBackPressed() {
 
-        Intent intent  =new Intent();
-        if (chatEditView.getText().toString() != null){
-            intent.putExtra("msg",chatEditView.getText().toString());
-            intent.putExtra("friend",friend);
-        }
+        Intent intent  =new Intent(ChatActivity.this,WeixinFragment.class);
+        Bundle bundle = new Bundle();
+        bundle.putString("msg",chatEditView.getText().toString());
+        bundle.putString("friend",friend);
+        //intent.putExtra("friend",friend);
         setResult(10,intent);
         finish();
     }
@@ -122,6 +126,7 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
      */
     private void initMessage() {
         String name = getIntent().getStringExtra("friend");
+        String message = getIntent().getStringExtra("msg");
         if (name.equals("老爸")){
             News message1 = new News(0,"最近过的还好吗?", BitmapFactory.decodeResource(getResources(),R.drawable.image1));
             newsArrayList.add(message1);
@@ -149,9 +154,9 @@ public class ChatActivity extends AppCompatActivity implements View.OnClickListe
 
         switch (view.getId()) {
             case R.id.img_back:
-                Intent intent = new Intent(ChatActivity.this, WeixinFragment.class);
-                overridePendingTransition(R.anim.push_left_in,R.anim.push_left_out);
-                startActivity(intent);
+//                Intent intent = new Intent(ChatActivity.this, WeixinFragment.class);
+//                overridePendingTransition(R.anim.push_left_in,R.anim.push_left_out);
+//                startActivity(intent);
                 break;
             default:
                 break;
