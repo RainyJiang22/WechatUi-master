@@ -1,0 +1,160 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml:2:1-25:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\6d165b3653a13cce86729f0093b0feed\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\a9bfbb575c1fc442fcb11958fd965ad6\AndroidManifest.xml:2:1-11:12
+MERGED from [com.jakewharton:butterknife:9.0.0-rc3] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\butterknife-9.0.0-rc3.aar\e750eb17393427c1144e7829bb6370d0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\50a578df15f6e181d60df812462e2a33\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\051fa1acf4b0678af6029d6e49726d64\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\89aa50babdb8d5d7182963166e0fec80\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\af08b68b996a1762538431622cfad169\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\78ee30048dddaa1476dee64d7ea43600\AndroidManifest.xml:17:1-22:12
+MERGED from [com.jakewharton:butterknife-runtime:9.0.0-rc3] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\butterknife-runtime-9.0.0-rc3.aar\3837ab0ab580e7460587d4f117ddda76\AndroidManifest.xml:2:1-7:12
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\e651ec22e3ada8aa2e1592317d4b9fd5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\6c0ef538f46467bf4f4c9974710663f5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\3ccc03a3a7c9142f92bd3403b37d34bd\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\199f6f81d9a4159d7487fe7aefbce847\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\7dcb15a45f51b61227c431f7c5a15400\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\f79bbeaeceb08dc25c38df7af4749ab9\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\0a0780727e2a9f3277aa3565bb60f607\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\6024e477ae1f1efa6cc53b9c335a3193\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\4c26a88ea67da287c17ddc339b30aad6\AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\9769aa32bd3715bc0caa9c410a1e3525\AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\fc3a49f31815297a4aae879548312d01\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\31527bae7ff35486ba8b8d0edd2e261c\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\8a91898a318f1eca03f4e12716c6cbf2\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\1337c14d7ae9c1588481703369b0e6e4\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\46c3d86e7b239b8d608d448354515eb3\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\36f149d52fa9e02eca48466d49207251\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\4a77085d2043b1785722ba8f54e5a27a\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\0b2ebc3a2ac5b8a3807ff82aee242872\AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\4911035bc8e37b93e7884f538ca2e3b8\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\d780260f58bb1a8f870d580a39da76c2\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml:2:1-25:12
+	package
+		ADDED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml:3:5-34
+		INJECTED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml:2:1-25:12
+		INJECTED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml:2:1-25:12
+		INJECTED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml:2:11-69
+application
+ADDED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml:5:5-22:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\a9bfbb575c1fc442fcb11958fd965ad6\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\a9bfbb575c1fc442fcb11958fd965ad6\AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\4c26a88ea67da287c17ddc339b30aad6\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\4c26a88ea67da287c17ddc339b30aad6\AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\9769aa32bd3715bc0caa9c410a1e3525\AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\9769aa32bd3715bc0caa9c410a1e3525\AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\4c26a88ea67da287c17ddc339b30aad6\AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml:11:9-40
+activity#com.example.italker.push.MainActivity
+ADDED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml:14:9-20:20
+	android:name
+		ADDED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml:14:19-52
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml:15:13-19:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml:16:17-69
+	android:name
+		ADDED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml:16:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml:18:17-77
+	android:name
+		ADDED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml:18:27-74
+uses-sdk
+INJECTED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\6d165b3653a13cce86729f0093b0feed\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\appcompat-v7-28.0.0.aar\6d165b3653a13cce86729f0093b0feed\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\a9bfbb575c1fc442fcb11958fd965ad6\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\a9bfbb575c1fc442fcb11958fd965ad6\AndroidManifest.xml:5:5-7:41
+MERGED from [com.jakewharton:butterknife:9.0.0-rc3] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\butterknife-9.0.0-rc3.aar\e750eb17393427c1144e7829bb6370d0\AndroidManifest.xml:5:5-44
+MERGED from [com.jakewharton:butterknife:9.0.0-rc3] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\butterknife-9.0.0-rc3.aar\e750eb17393427c1144e7829bb6370d0\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\50a578df15f6e181d60df812462e2a33\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\support-fragment-28.0.0.aar\50a578df15f6e181d60df812462e2a33\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\051fa1acf4b0678af6029d6e49726d64\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-28.0.0.aar\051fa1acf4b0678af6029d6e49726d64\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\89aa50babdb8d5d7182963166e0fec80\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\support-core-ui-28.0.0.aar\89aa50babdb8d5d7182963166e0fec80\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\af08b68b996a1762538431622cfad169\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\support-core-utils-28.0.0.aar\af08b68b996a1762538431622cfad169\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\78ee30048dddaa1476dee64d7ea43600\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-28.0.0.aar\78ee30048dddaa1476dee64d7ea43600\AndroidManifest.xml:20:5-44
+MERGED from [com.jakewharton:butterknife-runtime:9.0.0-rc3] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\butterknife-runtime-9.0.0-rc3.aar\3837ab0ab580e7460587d4f117ddda76\AndroidManifest.xml:5:5-44
+MERGED from [com.jakewharton:butterknife-runtime:9.0.0-rc3] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\butterknife-runtime-9.0.0-rc3.aar\3837ab0ab580e7460587d4f117ddda76\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\e651ec22e3ada8aa2e1592317d4b9fd5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\loader-28.0.0.aar\e651ec22e3ada8aa2e1592317d4b9fd5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\6c0ef538f46467bf4f4c9974710663f5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\viewpager-28.0.0.aar\6c0ef538f46467bf4f4c9974710663f5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\3ccc03a3a7c9142f92bd3403b37d34bd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\coordinatorlayout-28.0.0.aar\3ccc03a3a7c9142f92bd3403b37d34bd\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\199f6f81d9a4159d7487fe7aefbce847\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\drawerlayout-28.0.0.aar\199f6f81d9a4159d7487fe7aefbce847\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\7dcb15a45f51b61227c431f7c5a15400\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\slidingpanelayout-28.0.0.aar\7dcb15a45f51b61227c431f7c5a15400\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\f79bbeaeceb08dc25c38df7af4749ab9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\customview-28.0.0.aar\f79bbeaeceb08dc25c38df7af4749ab9\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\0a0780727e2a9f3277aa3565bb60f607\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\swiperefreshlayout-28.0.0.aar\0a0780727e2a9f3277aa3565bb60f607\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\6024e477ae1f1efa6cc53b9c335a3193\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\asynclayoutinflater-28.0.0.aar\6024e477ae1f1efa6cc53b9c335a3193\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\4c26a88ea67da287c17ddc339b30aad6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\support-compat-28.0.0.aar\4c26a88ea67da287c17ddc339b30aad6\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\9769aa32bd3715bc0caa9c410a1e3525\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\versionedparcelable-28.0.0.aar\9769aa32bd3715bc0caa9c410a1e3525\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\fc3a49f31815297a4aae879548312d01\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\cursoradapter-28.0.0.aar\fc3a49f31815297a4aae879548312d01\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\31527bae7ff35486ba8b8d0edd2e261c\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\31527bae7ff35486ba8b8d0edd2e261c\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\8a91898a318f1eca03f4e12716c6cbf2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\documentfile-28.0.0.aar\8a91898a318f1eca03f4e12716c6cbf2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\1337c14d7ae9c1588481703369b0e6e4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\localbroadcastmanager-28.0.0.aar\1337c14d7ae9c1588481703369b0e6e4\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\46c3d86e7b239b8d608d448354515eb3\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\print-28.0.0.aar\46c3d86e7b239b8d608d448354515eb3\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\36f149d52fa9e02eca48466d49207251\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.1.aar\36f149d52fa9e02eca48466d49207251\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\4a77085d2043b1785722ba8f54e5a27a\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\livedata-1.1.1.aar\4a77085d2043b1785722ba8f54e5a27a\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\0b2ebc3a2ac5b8a3807ff82aee242872\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.1.aar\0b2ebc3a2ac5b8a3807ff82aee242872\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\4911035bc8e37b93e7884f538ca2e3b8\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\runtime-1.1.1.aar\4911035bc8e37b93e7884f538ca2e3b8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\d780260f58bb1a8f870d580a39da76c2\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] C:\Users\Jacky\.gradle\caches\transforms-1\files-1.1\interpolator-28.0.0.aar\d780260f58bb1a8f870d580a39da76c2\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Jacky\AndroidStudioProjects\WechatUi-master\ITalker\app\src\main\AndroidManifest.xml

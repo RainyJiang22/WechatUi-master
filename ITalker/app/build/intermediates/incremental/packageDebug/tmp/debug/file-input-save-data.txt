@@ -1,0 +1,11 @@
+#Internal package file, do not edit.
+#Fri Dec 28 09:21:00 CST 2018
+1.base=C\:\\Users\\Jacky\\AndroidStudioProjects\\WechatUi-master\\ITalker\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+0.baseType=DIRECTORY
+1.baseType=DIRECTORY
+count=2
+1.set=DEX
+0.path=classes.dex
+0.set=DEX
+0.base=C\:\\Users\\Jacky\\AndroidStudioProjects\\WechatUi-master\\ITalker\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
+1.path=classes.dex
